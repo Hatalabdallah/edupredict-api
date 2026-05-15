@@ -4,6 +4,7 @@
 
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import json
 import pandas as pd
@@ -48,6 +49,16 @@ app = FastAPI(
     title="EduPredict API",
     description="Student Dropout Prediction API - YMCA Institute Uganda",
     version="1.0.0"
+)
+
+
+# ADD THIS: Allow all origins to access the API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all websites to call this API
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows GET, POST, etc.
+    allow_headers=["*"],  # Allows all headers
 )
 
 # ============================================
