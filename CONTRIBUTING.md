@@ -109,14 +109,3 @@ All contributors will be recognized in the project's contributors list. We value
 
 <p align="center">❤️ Thank you for contributing to EduPredict!</p>
 ```
-
-
-## 🚀 Push to GitHub
-
-Now in your VS Code terminal, run:
-
-```
-git add README.md LICENSE CONTRIBUTING.md
-git commit -m "Add professional documentation: README, LICENSE, CONTRIBUTING"
-git push origin main
-```
